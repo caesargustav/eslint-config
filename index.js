@@ -34,7 +34,7 @@ module.exports = {
     // stylistic issues
     'array-element-newline': ['error', 'consistent'],
     'block-spacing': 'error',
-    'brace-style': ['error', { 'allowSingleLine': true }],
+    'brace-style': ['error', '1tbs', { 'allowSingleLine': true }],
     'camelcase': 'error',
     'comma-spacing': ['error', { 'before': false, 'after': true }],
     'func-call-spacing': ['error', 'never'],
