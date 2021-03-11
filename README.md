@@ -5,6 +5,11 @@
 yarn add eslint git+https://gitlab.com/wacg/tools/eslint-config-wacg.git -D
 ```
 
+for updating run:
+```sh
+yarn upgrade eslint-config-wacg
+```
+
 2. add `.eslintrc.js` in the root dirictory with following content:
 
 ```js
@@ -18,8 +23,8 @@ module.exports = {
 3. Either install the VS Code [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) extension for direct integration or add lint tasks to `package.json`:
 ```json
 "scripts": {
-  "lint": "eslint **/*",
-  "lint:fix": "eslint **/* --fix"
+  "lint": "eslint **/*.js",
+  "lint:fix": "eslint **/*.js --fix"
 }
 ```
 
