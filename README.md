@@ -18,6 +18,15 @@ module.exports = {
 3. Either install the VS Code [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) extension for direct integration or add lint tasks to `package.json`:
 ```json
 "scripts": {
+  "lint": "eslint **/*",
+  "lint:fix": "eslint **/* --fix"
+}
+```
+
+for multiple file extensions:
+
+```json
+"scripts": {
   "lint": "eslint **/*.{js,vue}",
   "lint:fix": "eslint **/*.{js,vue} --fix"
 }
