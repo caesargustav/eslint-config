@@ -20,7 +20,7 @@ module.exports = {
 "scripts": {
   "lint": "eslint **/*.{js,vue}",
   "lint:fix": "eslint **/*.{js,vue} --fix"
-},
+}
 ```
 
 [ESLint Command Line Docs](https://eslint.org/docs/user-guide/command-line-interface)
