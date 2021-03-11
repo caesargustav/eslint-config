@@ -50,7 +50,7 @@ module.exports = {
       'objectsInObjects': true,
       'arraysInObjects': true
     }],
-    'padded-blocks': 'error',
+    'padded-blocks': ['error', 'never'],
     'quotes': ['error', 'single'],
     'semi': ['error', 'never'],
     'space-before-blocks': 'error',
