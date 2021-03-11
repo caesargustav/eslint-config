@@ -1,5 +1,10 @@
 ## Instructions for unpublished package
 
+You may need to run the following command first to be able to add unofficial gitlab npm packages:
+```sh
+git config --global url."git@gitlab.com:".insteadOf "https://gitlab.com/"
+```
+
 1. Run following command in the directory of the project where `package.json` is located
 ```sh
 yarn add eslint git+https://gitlab.com/wacg/tools/eslint-config-wacg.git -D
