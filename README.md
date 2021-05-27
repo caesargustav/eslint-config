@@ -1,45 +1,42 @@
-## Instructions for unpublished package
+## WACG ESLint Config
 
-You may need to run the following command first, to be able to add unofficial gitlab npm packages:
+ESLint configuration file for WACG projects
+
+<!-- installing (start) -->
+### Installing
+
+npm
 ```sh
-git config --global url."git@gitlab.com:".insteadOf "https://gitlab.com/"
+npm i -D eslint @wacg/eslint-config
 ```
 
-1. Run following command in the directory of the project where `package.json` is located:
+yarn
 ```sh
-yarn add eslint git+https://gitlab.com/wacg/tools/eslint-config-wacg.git -D
+yarn add -D eslint @wacg/eslint-config
 ```
+<!-- installing (end) -->
 
-for updating run:
-```sh
-yarn upgrade eslint-config-wacg
-```
-
-2. add `.eslintrc.js` in the root dirictory with following content:
+<!-- configuration (start) -->
+### Configuration
+add `.eslintrc.js` in the root dirictory of your project with following content:
 
 ```js
 module.exports = {
   extends: [
-    'wacg'
+    '@wacg/eslint-config'
   ]
 }
 ```
+<!-- configuration (end) -->
 
-3. Either install the VS Code [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) extension for direct integration or add lint tasks to `package.json`:
+<!-- tasks (start) -->
+### Tasks
+add the following task to the `scripts` section of your `package.json`
+
 ```json
 "scripts": {
   "lint": "eslint **/*.js",
   "lint:fix": "eslint **/*.js --fix"
 }
 ```
-
-for multiple file extensions:
-
-```json
-"scripts": {
-  "lint": "eslint **/*.{js,vue}",
-  "lint:fix": "eslint **/*.{js,vue} --fix"
-}
-```
-
-[ESLint Command Line Docs](https://eslint.org/docs/user-guide/command-line-interface)
+<!-- tasks (end) -->
