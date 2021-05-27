@@ -1,20 +1,27 @@
 module.exports = {
   extends: [
-    'esnext',
-    'plugin:vue/recommended' // Vue 2
+    'eslint:recommended'
   ],
-  plugins: [
-    'vue'
-  ],
+  parserOptions: {
+    ecmaVersion: 2021,
+    sourceType: 'module'
+  },
+  env: {
+    node: true,
+    commonjs: true,
+    browser: true,
+    es6: true
+  },
   rules: {
     /**
      * custom rules
      * docs: https://eslint.org/docs/rules
      */
-    // possible errors
+
+    // possible errors - https://eslint.org/docs/rules/#possible-errors
     /* activated in esnext preset */
 
-    // best practices
+    // best practices - https://eslint.org/docs/rules/#best-practices
     'eqeqeq': ['error', 'smart'],
     'no-empty-function': 'error',
     'no-invalid-this': 'error',
@@ -28,10 +35,7 @@ module.exports = {
     'require-await': 'error',
     'yoda': 'error',
 
-    // variables
-    'no-use-before-define': 'error',
-
-    // stylistic issues
+    // stylistic issues - https://eslint.org/docs/rules/#stylistic-issues
     'array-element-newline': ['error', 'consistent'],
     'block-spacing': 'error',
     'brace-style': ['error', '1tbs', { 'allowSingleLine': true }],
@@ -41,7 +45,7 @@ module.exports = {
     'function-paren-newline': ['error', 'consistent'],
     'implicit-arrow-linebreak': ['error', 'beside'],
     'indent': ['error', 2],
-    'no-multiple-empty-lines': 'error',
+    'no-multiple-empty-lines': ['error', { 'max': 1 }],
     'no-trailing-spaces': 'error',
     'no-unneeded-ternary': 'error',
     'no-whitespace-before-property': 'error',
@@ -58,7 +62,10 @@ module.exports = {
     'space-in-parens': 'error',
     'space-infix-ops': 'error',
 
-    // ECMAScript 6
+    // variables - https://eslint.org/docs/rules/#variables
+    'no-use-before-define': 'error',
+
+    // ECMAScript 6 - https://eslint.org/docs/rules/#ecmascript-6
     'arrow-body-style': ['error', 'as-needed'],
     'arrow-parens': ['error', 'as-needed'],
     'arrow-spacing': 'error',
